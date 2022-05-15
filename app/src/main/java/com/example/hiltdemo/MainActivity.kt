@@ -11,13 +11,12 @@ import javax.inject.Named
 class MainActivity : AppCompatActivity() {
     
     @Inject
-    @Named("DisplayString")
-    lateinit var testString: String
+    lateinit var activityString: String
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         
-        Log.d("MainActivity", "Test string from MainActivity: $testString")
+        Log.d("MainActivity", "Test string from MainActivity: $activityString")
     }
 }
