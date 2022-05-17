@@ -1,9 +1,11 @@
 package com.example.hiltdemo
 
+import android.content.Context
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.android.scopes.ActivityScoped
 import javax.inject.Named
 
@@ -15,5 +17,7 @@ object MainModule {
     @ActivityScoped
     @Provides
     @Named("SomeString")
-    fun provideActivityString() = "This is a string for an Activity"
+    fun provideActivityString(
+        @ApplicationContext context: Context
+    ) = context.getString(R.string.string_to_inject)
 }

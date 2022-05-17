@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HiltDemo</string>
+    <string name="string_to_inject">This is a string for an Activity via a String resource</string>
 </resources>
