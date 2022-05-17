@@ -20,4 +20,11 @@ object MainModule {
     fun provideActivityString(
         @ApplicationContext context: Context
     ) = context.getString(R.string.string_to_inject)
+    
+    @ActivityScoped
+    @Provides
+    fun provideCombinedString(
+        @ApplicationContext context: Context,
+        @Named("DisplayString") testString: String
+    ) = "${context.getString(R.string.string_to_inject)} - $testString"
 }

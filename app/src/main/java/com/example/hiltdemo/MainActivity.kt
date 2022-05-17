@@ -14,10 +14,14 @@ class MainActivity : AppCompatActivity() {
     @Named("SomeString")
     lateinit var activityString: String
     
+    @Inject
+    lateinit var combinedString: String
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         
         Log.d("MainActivity", "Test string from MainActivity: $activityString")
+        Log.d("MainActivity", "A complex string : $combinedString")
     }
 }
