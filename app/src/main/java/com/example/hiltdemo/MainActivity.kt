@@ -11,6 +11,7 @@ import javax.inject.Named
 class MainActivity : AppCompatActivity() {
     
     @Inject
+    @Named("SomeString")
     lateinit var activityString: String
     
     override fun onCreate(savedInstanceState: Bundle?) {
